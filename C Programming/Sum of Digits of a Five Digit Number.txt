@@ -1,0 +1,33 @@
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main() {
+
+  // declare variable for input and sumarry of every digit
+  int n, sum;
+  
+  // input the number
+  scanf("%d", &n);
+  
+  /* declare the sum into 0, we will 
+   * assign the calculation into this varible */
+  sum = 0;
+
+  /* loop through the value size of input */
+  for ( int i = 0; i <= sizeof(n); i++) { 
+    // add the last digit of the input integer into the sum variable
+    sum += (n % 10); 
+    // remove the last digit of the input integer 
+    n /= 10;
+
+    /* trace here if you want to see what happens
+     * printf("the sum of %d in the index of [%d] is = %d\n", n, i, sum); */
+  }
+
+  // print  the sum
+  printf("%d", sum);
+  /* printf("the sum is ->%d \n" , sum); */
+  return 0;
+}
